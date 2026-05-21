@@ -14,7 +14,6 @@ local G2L = {};
 G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
 G2L["1"]["IgnoreGuiInset"] = true;
 G2L["1"]["DisplayOrder"] = 999;
-G2L["1"]["Enabled"] = true;
 G2L["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets;
 G2L["1"]["Name"] = [[K1BENTEAM]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
@@ -63,18 +62,18 @@ G2L["5"]["Name"] = [[ExecutorTab]];
 G2L["5"]["Position"] = UDim2.new(0.01, 0, 0.05263, 0);
 
 
--- StarterGui.K1BENTEAM.main.tabsselection.ExecutorTab.UIStroke
-G2L["6"] = Instance.new("UIStroke", G2L["5"]);
-G2L["6"]["Enabled"] = false;
-G2L["6"]["Thickness"] = 3;
-G2L["6"]["Color"] = Color3.fromRGB(0, 111, 255);
-G2L["6"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-G2L["6"]["LineJoinMode"] = Enum.LineJoinMode.Miter;
-
-
 -- StarterGui.K1BENTEAM.main.tabsselection.ExecutorTab.OpenExecutor
-G2L["7"] = Instance.new("LocalScript", G2L["5"]);
-G2L["7"]["Name"] = [[OpenExecutor]];
+G2L["6"] = Instance.new("LocalScript", G2L["5"]);
+G2L["6"]["Name"] = [[OpenExecutor]];
+
+
+-- StarterGui.K1BENTEAM.main.tabsselection.ExecutorTab.UIStroke
+G2L["7"] = Instance.new("UIStroke", G2L["5"]);
+G2L["7"]["Enabled"] = false;
+G2L["7"]["Thickness"] = 3;
+G2L["7"]["Color"] = Color3.fromRGB(0, 111, 255);
+G2L["7"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["7"]["LineJoinMode"] = Enum.LineJoinMode.Miter;
 
 
 -- StarterGui.K1BENTEAM.main.tabsselection.TeamTab
@@ -298,7 +297,7 @@ G2L["1b"]["TextScaled"] = true;
 G2L["1b"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1b"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
 G2L["1b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["1b"]["Size"] = UDim2.new(0, 586, 0, 91);
+G2L["1b"]["Size"] = UDim2.new(0.9983, 0, 0.325, 0);
 G2L["1b"]["ClipsDescendants"] = true;
 G2L["1b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1b"]["Text"] = [[logo logo será adicionado botoes, ccomo posso adicionar?]];
@@ -321,7 +320,7 @@ G2L["1d"]["TextScaled"] = true;
 G2L["1d"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1d"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
 G2L["1d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["1d"]["Size"] = UDim2.new(0, 586, 0, 144);
+G2L["1d"]["Size"] = UDim2.new(0.9983, 0, 0.51429, 0);
 G2L["1d"]["ClipsDescendants"] = true;
 G2L["1d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1d"]["Text"] = [[me manda um script q tu achou e um nome e pronto, vai ser adicionado nessa aba]];
@@ -360,7 +359,7 @@ G2L["20"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], 
 G2L["20"]["MultiLine"] = true;
 G2L["20"]["ClearTextOnFocus"] = false;
 G2L["20"]["PlaceholderText"] = [[eu me odeio cola teu script aq logo]];
-G2L["20"]["Size"] = UDim2.new(0, 573, 0, 175);
+G2L["20"]["Size"] = UDim2.new(0.97615, 0, 0.625, 0);
 G2L["20"]["Position"] = UDim2.new(0.01193, 0, 0.025, 0);
 G2L["20"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["20"]["Text"] = [[]];
@@ -440,7 +439,7 @@ G2L["27"] = Instance.new("Frame", G2L["3"]);
 G2L["27"]["Visible"] = false;
 G2L["27"]["BorderSizePixel"] = 0;
 G2L["27"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["27"]["Size"] = UDim2.new(0, 432, 0, 254);
+G2L["27"]["Size"] = UDim2.new(0.72, 0, 0.72571, 0);
 G2L["27"]["Position"] = UDim2.new(0.14, 0, 0.05714, 0);
 G2L["27"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["27"]["Name"] = [[CloseConfirm]];
@@ -456,7 +455,7 @@ G2L["28"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["28"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["28"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["28"]["BackgroundTransparency"] = 1;
-G2L["28"]["Size"] = UDim2.new(0, 408, 0, 54);
+G2L["28"]["Size"] = UDim2.new(0.94444, 0, 0.2126, 0);
 G2L["28"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["28"]["Text"] = [[tu vai mermo fechar ssa p*rra?]];
 G2L["28"]["Name"] = [[Title]];
@@ -472,7 +471,7 @@ G2L["29"]["TextScaled"] = true;
 G2L["29"]["TextColor3"] = Color3.fromRGB(0, 255, 0);
 G2L["29"]["BackgroundColor3"] = Color3.fromRGB(54, 54, 54);
 G2L["29"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["29"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["29"]["Size"] = UDim2.new(0.46296, 0, 0.19685, 0);
 G2L["29"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["29"]["Text"] = [[sim seu m*rda]];
 G2L["29"]["Name"] = [[Yes]];
@@ -493,7 +492,7 @@ G2L["2b"]["TextScaled"] = true;
 G2L["2b"]["TextColor3"] = Color3.fromRGB(255, 0, 0);
 G2L["2b"]["BackgroundColor3"] = Color3.fromRGB(54, 54, 54);
 G2L["2b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["2b"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["2b"]["Size"] = UDim2.new(0.46296, 0, 0.19685, 0);
 G2L["2b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["2b"]["Text"] = [[nao seu cabeça de b*sta]];
 G2L["2b"]["Name"] = [[No]];
@@ -653,8 +652,8 @@ local script = G2L["2"];
 end;
 task.spawn(C_2);
 -- StarterGui.K1BENTEAM.main.tabsselection.ExecutorTab.OpenExecutor
-local function C_7()
-local script = G2L["7"];
+local function C_6()
+local script = G2L["6"];
 	local btn = script.Parent
 	local tab = btn.Parent.Parent.Tabs.ExecutorTab
 	
@@ -676,7 +675,7 @@ local script = G2L["7"];
 		end
 	end)
 end;
-task.spawn(C_7);
+task.spawn(C_6);
 -- StarterGui.K1BENTEAM.main.tabsselection.TeamTab.OpenTeam
 local function C_9()
 local script = G2L["9"];
@@ -730,106 +729,83 @@ task.spawn(C_c);
 -- StarterGui.K1BENTEAM.main.Tabs.MyScriptsTab.FlyButton.FlyScript
 local function C_11()
 local script = G2L["11"];
-	local button = script.Parent
-	local player = game.Players.LocalPlayer
-	local UIS = game:GetService("UserInputService")
-	local RS = game:GetService("RunService")
+	local btn = script.Parent -- O botão em si
+	local Players = game:GetService("Players")
+	local RunService = game:GetService("RunService")
+	local LocalPlayer = Players.LocalPlayer
 	
-	local flying = false
-	local bodyVelocity
-	local bodyGyro
+	local FLYING = false
+	local iyflyspeed = 50
+	local spinAngle = 0
+	local spinSpeed = 15
 	
-	local speed = 60
-	local spinSpeed = 360 -- FIXO, pode aumentar tranquilo
-	local angle = 0
-	
-	local character
-	local hrp
-	
-	local function setupChar()
-		character = player.Character or player.CharacterAdded:Wait()
-		hrp = character:WaitForChild("HumanoidRootPart")
+	-- Função de rotação
+	local function getRotation(cameraCFrame)
+		spinAngle = (spinAngle + spinSpeed) % 360
+		return cameraCFrame * CFrame.Angles(0, math.rad(spinAngle), 0)
 	end
 	
-	setupChar()
-	player.CharacterAdded:Connect(setupChar)
-	
+	-- A lógica que a gente construiu
 	local function toggleFly()
-		if flying then
-			flying = false
+		FLYING = not FLYING
 	
-			if bodyVelocity then bodyVelocity:Destroy() bodyVelocity = nil end
-			if bodyGyro then bodyGyro:Destroy() bodyGyro = nil end
+		local character = LocalPlayer.Character
+		if not character then return end
+		local root = character:FindFirstChild("HumanoidRootPart")
+		local humanoid = character:FindFirstChildOfClass("Humanoid")
+		if not root or not humanoid then return end
 	
-			button.Text = "um fly daora"
+		if FLYING then
+			btn.Text = "um fly daora ta ligado..." -- Feedback visual pro user
+			humanoid.PlatformStand = true
+			
+			task.wait()
+	
+			local bv = Instance.new("BodyVelocity")
+			bv.Name = "K1BEN5_Velocity"
+			bv.Velocity = Vector3.zero
+			bv.MaxForce = Vector3.new(9e9, 9e9, 9e9)
+			bv.Parent = root
+	
+			local bg = Instance.new("BodyGyro")
+			bg.Name = "K1BEN5_Gyro"
+			bg.MaxTorque = Vector3.new(9e9, 9e9, 9e9)
+			bg.P = 1e4
+			bg.Parent = root
+	
+			task.spawn(function()
+				local PlayerModule = LocalPlayer:FindFirstChild("PlayerScripts"):FindFirstChild("PlayerModule")
+				local controlModule = require(PlayerModule:FindFirstChild("ControlModule"))
+	
+				while FLYING do
+					local camera = workspace.CurrentCamera
+					local moveDir = controlModule:GetMoveVector()
+	
+					if moveDir.Magnitude > 0 then
+						bv.Velocity = ((camera.CFrame.LookVector * -moveDir.Z) + (camera.CFrame.RightVector * moveDir.X)) * iyflyspeed
+					else
+						bv.Velocity = Vector3.zero
+					end
+	
+					bg.CFrame = getRotation(camera.CFrame)
+					task.wait()
+				end
+	
+				if root:FindFirstChild("K1BEN5_Velocity") then root.K1BEN5_Velocity:Destroy() end
+				if root:FindFirstChild("K1BEN5_Gyro") then root.K1BEN5_Gyro:Destroy() end
+				
+				task.wait()
+				
+				humanoid.PlatformStand = false
+				btn.Text = "um fly daora" -- Volta o texto original
+			end)
 		else
-			flying = true
-	
-			bodyVelocity = Instance.new("BodyVelocity")
-			bodyVelocity.MaxForce = Vector3.new(1e6,1e6,1e6)
-			bodyVelocity.Velocity = Vector3.zero
-			bodyVelocity.Parent = hrp
-	
-			bodyGyro = Instance.new("BodyGyro")
-			bodyGyro.MaxTorque = Vector3.new(1e6,1e6,1e6)
-			bodyGyro.P = 1e6
-			bodyGyro.D = 1000
-			bodyGyro.CFrame = hrp.CFrame
-			bodyGyro.Parent = hrp
-	
-			button.Text = "um fly daora ta ligado..."
+			-- Se o usuário clicar de novo, o loop "while FLYING" para sozinho e limpa
 		end
 	end
 	
-	button.MouseButton1Click:Connect(toggleFly)
-	
-	RS.RenderStepped:Connect(function(dt)
-		if not flying or not bodyVelocity or not bodyGyro then return end
-	
-		local moveDirection = Vector3.zero
-		local cam = workspace.CurrentCamera
-	
-		-- PC
-		if UIS:IsKeyDown(Enum.KeyCode.W) then
-			moveDirection += cam.CFrame.LookVector
-		end
-		if UIS:IsKeyDown(Enum.KeyCode.S) then
-			moveDirection -= cam.CFrame.LookVector
-		end
-		if UIS:IsKeyDown(Enum.KeyCode.A) then
-			moveDirection -= cam.CFrame.RightVector
-		end
-		if UIS:IsKeyDown(Enum.KeyCode.D) then
-			moveDirection += cam.CFrame.RightVector
-		end
-		if UIS:IsKeyDown(Enum.KeyCode.Space) then
-			moveDirection += Vector3.new(0,1,0)
-		end
-		if UIS:IsKeyDown(Enum.KeyCode.LeftShift) then
-			moveDirection -= Vector3.new(0,1,0)
-		end
-	
-		-- mobile simples
-		if UIS.TouchEnabled then
-			local delta = UIS:GetMouseDelta()
-			moveDirection += Vector3.new(delta.X, 0, -delta.Y) * 0.1
-		end
-	
-		-- movimento
-		if moveDirection.Magnitude > 0 then
-			bodyVelocity.Velocity = moveDirection.Unit * speed
-		else
-			bodyVelocity.Velocity = Vector3.zero
-		end
-	
-		-- 🔥 SPIN FIXO LISO
-		angle += spinSpeed * dt
-	
-		local look = cam.CFrame.LookVector
-		local baseCF = CFrame.lookAt(hrp.Position, hrp.Position + look)
-	
-		bodyGyro.CFrame = baseCF * CFrame.Angles(0, math.rad(angle), 0)
-	end)
+	-- CONEXÃO DO BOTÃO (Aqui a mágica acontece!)
+	btn.MouseButton1Click:Connect(toggleFly)
 end;
 task.spawn(C_11);
 -- StarterGui.K1BENTEAM.main.Tabs.MyScriptsTab.ESPTeamButton.ESPTeamScript
