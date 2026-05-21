@@ -7,20 +7,22 @@
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
 ]=]
 
--- Instances: 48 | Scripts: 16 | Modules: 0 | Tags: 0
+-- Instances: 51 | Scripts: 18 | Modules: 0 | Tags: 0
 local G2L = {};
 
 -- StarterGui.K1BENTEAM
 G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
 G2L["1"]["IgnoreGuiInset"] = true;
+G2L["1"]["DisplayOrder"] = 999;
+G2L["1"]["Enabled"] = true;
 G2L["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets;
 G2L["1"]["Name"] = [[K1BENTEAM]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
 
 
--- StarterGui.K1BENTEAM.LocalScript
+-- StarterGui.K1BENTEAM.drag
 G2L["2"] = Instance.new("LocalScript", G2L["1"]);
-
+G2L["2"]["Name"] = [[drag]];
 
 
 -- StarterGui.K1BENTEAM.main
@@ -70,482 +72,471 @@ G2L["6"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 G2L["6"]["LineJoinMode"] = Enum.LineJoinMode.Miter;
 
 
+-- StarterGui.K1BENTEAM.main.tabsselection.ExecutorTab.OpenExecutor
+G2L["7"] = Instance.new("LocalScript", G2L["5"]);
+G2L["7"]["Name"] = [[OpenExecutor]];
+
+
 -- StarterGui.K1BENTEAM.main.tabsselection.TeamTab
-G2L["7"] = Instance.new("TextButton", G2L["4"]);
-G2L["7"]["TextWrapped"] = true;
-G2L["7"]["TextStrokeTransparency"] = 0;
-G2L["7"]["BorderSizePixel"] = 0;
-G2L["7"]["TextStrokeColor3"] = Color3.fromRGB(56, 128, 0);
-G2L["7"]["TextSize"] = 14;
-G2L["7"]["TextScaled"] = true;
-G2L["7"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["7"]["BackgroundColor3"] = Color3.fromRGB(255, 129, 0);
-G2L["7"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["7"]["Size"] = UDim2.new(0.19, 0, 0.89474, 0);
-G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["7"]["Text"] = [[scripts feitos pelo time]];
-G2L["7"]["Name"] = [[TeamTab]];
-G2L["7"]["Position"] = UDim2.new(0.23, 0, 0.05263, 0);
+G2L["8"] = Instance.new("TextButton", G2L["4"]);
+G2L["8"]["TextWrapped"] = true;
+G2L["8"]["TextStrokeTransparency"] = 0;
+G2L["8"]["BorderSizePixel"] = 0;
+G2L["8"]["TextStrokeColor3"] = Color3.fromRGB(56, 128, 0);
+G2L["8"]["TextSize"] = 14;
+G2L["8"]["TextScaled"] = true;
+G2L["8"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8"]["BackgroundColor3"] = Color3.fromRGB(255, 129, 0);
+G2L["8"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["8"]["Size"] = UDim2.new(0.19, 0, 0.89474, 0);
+G2L["8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8"]["Text"] = [[scripts feitos pelo time]];
+G2L["8"]["Name"] = [[TeamTab]];
+G2L["8"]["Position"] = UDim2.new(0.23, 0, 0.05263, 0);
 
 
--- StarterGui.K1BENTEAM.main.tabsselection.TeamTab.LocalScript
-G2L["8"] = Instance.new("LocalScript", G2L["7"]);
-
+-- StarterGui.K1BENTEAM.main.tabsselection.TeamTab.OpenTeam
+G2L["9"] = Instance.new("LocalScript", G2L["8"]);
+G2L["9"]["Name"] = [[OpenTeam]];
 
 
 -- StarterGui.K1BENTEAM.main.tabsselection.TeamTab.UIStroke
-G2L["9"] = Instance.new("UIStroke", G2L["7"]);
-G2L["9"]["Enabled"] = false;
-G2L["9"]["Thickness"] = 3;
-G2L["9"]["Color"] = Color3.fromRGB(0, 111, 255);
-G2L["9"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-G2L["9"]["LineJoinMode"] = Enum.LineJoinMode.Miter;
+G2L["a"] = Instance.new("UIStroke", G2L["8"]);
+G2L["a"]["Enabled"] = false;
+G2L["a"]["Thickness"] = 3;
+G2L["a"]["Color"] = Color3.fromRGB(0, 111, 255);
+G2L["a"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["a"]["LineJoinMode"] = Enum.LineJoinMode.Miter;
 
 
 -- StarterGui.K1BENTEAM.main.tabsselection.MyScriptsTab
-G2L["a"] = Instance.new("TextButton", G2L["4"]);
-G2L["a"]["TextWrapped"] = true;
-G2L["a"]["TextStrokeTransparency"] = 0;
-G2L["a"]["BorderSizePixel"] = 0;
-G2L["a"]["TextStrokeColor3"] = Color3.fromRGB(56, 128, 0);
-G2L["a"]["TextSize"] = 14;
-G2L["a"]["TextScaled"] = true;
-G2L["a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["a"]["BackgroundColor3"] = Color3.fromRGB(255, 129, 0);
-G2L["a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["a"]["Size"] = UDim2.new(0.19, 0, 0.89474, 0);
-G2L["a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["a"]["Text"] = [[scripts bons do kiben q nao sao m*rda]];
-G2L["a"]["Name"] = [[MyScriptsTab]];
-G2L["a"]["Position"] = UDim2.new(0.44833, 0, 0.05263, 0);
+G2L["b"] = Instance.new("TextButton", G2L["4"]);
+G2L["b"]["TextWrapped"] = true;
+G2L["b"]["TextStrokeTransparency"] = 0;
+G2L["b"]["BorderSizePixel"] = 0;
+G2L["b"]["TextStrokeColor3"] = Color3.fromRGB(56, 128, 0);
+G2L["b"]["TextSize"] = 14;
+G2L["b"]["TextScaled"] = true;
+G2L["b"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b"]["BackgroundColor3"] = Color3.fromRGB(255, 129, 0);
+G2L["b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["b"]["Size"] = UDim2.new(0.19, 0, 0.89474, 0);
+G2L["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b"]["Text"] = [[scripts bons do kiben q nao sao m*rda]];
+G2L["b"]["Name"] = [[MyScriptsTab]];
+G2L["b"]["Position"] = UDim2.new(0.44833, 0, 0.05263, 0);
 
 
--- StarterGui.K1BENTEAM.main.tabsselection.MyScriptsTab.LocalScript
-G2L["b"] = Instance.new("LocalScript", G2L["a"]);
-
+-- StarterGui.K1BENTEAM.main.tabsselection.MyScriptsTab.OpenMyScripts
+G2L["c"] = Instance.new("LocalScript", G2L["b"]);
+G2L["c"]["Name"] = [[OpenMyScripts]];
 
 
 -- StarterGui.K1BENTEAM.main.tabsselection.MyScriptsTab.UIStroke
-G2L["c"] = Instance.new("UIStroke", G2L["a"]);
-G2L["c"]["Thickness"] = 3;
-G2L["c"]["Color"] = Color3.fromRGB(0, 111, 255);
-G2L["c"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-G2L["c"]["LineJoinMode"] = Enum.LineJoinMode.Miter;
+G2L["d"] = Instance.new("UIStroke", G2L["b"]);
+G2L["d"]["Thickness"] = 3;
+G2L["d"]["Color"] = Color3.fromRGB(0, 111, 255);
+G2L["d"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["d"]["LineJoinMode"] = Enum.LineJoinMode.Miter;
 
 
 -- StarterGui.K1BENTEAM.main.Tabs
-G2L["d"] = Instance.new("Frame", G2L["3"]);
-G2L["d"]["BorderSizePixel"] = 0;
-G2L["d"]["BackgroundColor3"] = Color3.fromRGB(255, 141, 0);
-G2L["d"]["Size"] = UDim2.new(0.97833, 0, 0.8, 0);
-G2L["d"]["Position"] = UDim2.new(0.01, 0, 0.18286, 0);
-G2L["d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["d"]["Name"] = [[Tabs]];
+G2L["e"] = Instance.new("Frame", G2L["3"]);
+G2L["e"]["BorderSizePixel"] = 0;
+G2L["e"]["BackgroundColor3"] = Color3.fromRGB(255, 141, 0);
+G2L["e"]["Size"] = UDim2.new(0.97833, 0, 0.8, 0);
+G2L["e"]["Position"] = UDim2.new(0.01, 0, 0.18286, 0);
+G2L["e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["e"]["Name"] = [[Tabs]];
 
 
 -- StarterGui.K1BENTEAM.main.Tabs.MyScriptsTab
-G2L["e"] = Instance.new("Frame", G2L["d"]);
-G2L["e"]["BorderSizePixel"] = 0;
-G2L["e"]["BackgroundColor3"] = Color3.fromRGB(255, 141, 0);
-G2L["e"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["e"]["Position"] = UDim2.new(-0.00022, 0, -0.00286, 0);
-G2L["e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["e"]["Name"] = [[MyScriptsTab]];
+G2L["f"] = Instance.new("Frame", G2L["e"]);
+G2L["f"]["BorderSizePixel"] = 0;
+G2L["f"]["BackgroundColor3"] = Color3.fromRGB(255, 141, 0);
+G2L["f"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["f"]["Position"] = UDim2.new(-0.00022, 0, -0.00286, 0);
+G2L["f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["f"]["Name"] = [[MyScriptsTab]];
 
 
 -- StarterGui.K1BENTEAM.main.Tabs.MyScriptsTab.FlyButton
-G2L["f"] = Instance.new("TextButton", G2L["e"]);
-G2L["f"]["TextWrapped"] = true;
-G2L["f"]["TextStrokeTransparency"] = 0;
-G2L["f"]["BorderSizePixel"] = 0;
-G2L["f"]["TextStrokeColor3"] = Color3.fromRGB(0, 27, 255);
-G2L["f"]["TextSize"] = 14;
-G2L["f"]["TextScaled"] = true;
-G2L["f"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["f"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
-G2L["f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["f"]["Size"] = UDim2.new(0.27939, 0, 0.15714, 0);
-G2L["f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["f"]["Text"] = [[um fly daora]];
-G2L["f"]["Name"] = [[FlyButton]];
-G2L["f"]["Position"] = UDim2.new(0.02044, 0, 0.03571, 0);
+G2L["10"] = Instance.new("TextButton", G2L["f"]);
+G2L["10"]["TextWrapped"] = true;
+G2L["10"]["TextStrokeTransparency"] = 0;
+G2L["10"]["BorderSizePixel"] = 0;
+G2L["10"]["TextStrokeColor3"] = Color3.fromRGB(0, 27, 255);
+G2L["10"]["TextSize"] = 14;
+G2L["10"]["TextScaled"] = true;
+G2L["10"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["10"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["10"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["10"]["Size"] = UDim2.new(0.27939, 0, 0.15714, 0);
+G2L["10"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["10"]["Text"] = [[um fly daora]];
+G2L["10"]["Name"] = [[FlyButton]];
+G2L["10"]["Position"] = UDim2.new(0.02044, 0, 0.03571, 0);
 
 
--- StarterGui.K1BENTEAM.main.Tabs.MyScriptsTab.FlyButton.LocalScript
-G2L["10"] = Instance.new("LocalScript", G2L["f"]);
-
+-- StarterGui.K1BENTEAM.main.Tabs.MyScriptsTab.FlyButton.FlyScript
+G2L["11"] = Instance.new("LocalScript", G2L["10"]);
+G2L["11"]["Name"] = [[FlyScript]];
 
 
 -- StarterGui.K1BENTEAM.main.Tabs.MyScriptsTab.ESPTeamButton
-G2L["11"] = Instance.new("TextButton", G2L["e"]);
-G2L["11"]["TextWrapped"] = true;
-G2L["11"]["TextStrokeTransparency"] = 0;
-G2L["11"]["BorderSizePixel"] = 0;
-G2L["11"]["TextStrokeColor3"] = Color3.fromRGB(0, 27, 255);
-G2L["11"]["TextSize"] = 14;
-G2L["11"]["TextScaled"] = true;
-G2L["11"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["11"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
-G2L["11"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["11"]["Size"] = UDim2.new(0.27939, 0, 0.15714, 0);
-G2L["11"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["11"]["Text"] = [[esp nos membros do time nesse server]];
-G2L["11"]["Name"] = [[ESPTeamButton]];
-G2L["11"]["Position"] = UDim2.new(0.32709, 0, 0.03571, 0);
+G2L["12"] = Instance.new("TextButton", G2L["f"]);
+G2L["12"]["TextWrapped"] = true;
+G2L["12"]["TextStrokeTransparency"] = 0;
+G2L["12"]["BorderSizePixel"] = 0;
+G2L["12"]["TextStrokeColor3"] = Color3.fromRGB(0, 27, 255);
+G2L["12"]["TextSize"] = 14;
+G2L["12"]["TextScaled"] = true;
+G2L["12"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["12"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["12"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["12"]["Size"] = UDim2.new(0.27939, 0, 0.15714, 0);
+G2L["12"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["12"]["Text"] = [[esp nos membros do time nesse server]];
+G2L["12"]["Name"] = [[ESPTeamButton]];
+G2L["12"]["Position"] = UDim2.new(0.32709, 0, 0.03571, 0);
 
 
--- StarterGui.K1BENTEAM.main.Tabs.MyScriptsTab.ESPTeamButton.LocalScript
-G2L["12"] = Instance.new("LocalScript", G2L["11"]);
-
+-- StarterGui.K1BENTEAM.main.Tabs.MyScriptsTab.ESPTeamButton.ESPTeamScript
+G2L["13"] = Instance.new("LocalScript", G2L["12"]);
+G2L["13"]["Name"] = [[ESPTeamScript]];
 
 
 -- StarterGui.K1BENTEAM.main.Tabs.MyScriptsTab.ThirdPersonButton
-G2L["13"] = Instance.new("TextButton", G2L["e"]);
-G2L["13"]["TextWrapped"] = true;
-G2L["13"]["TextStrokeTransparency"] = 0;
-G2L["13"]["BorderSizePixel"] = 0;
-G2L["13"]["TextStrokeColor3"] = Color3.fromRGB(0, 27, 255);
-G2L["13"]["TextSize"] = 14;
-G2L["13"]["TextScaled"] = true;
-G2L["13"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["13"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
-G2L["13"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["13"]["Size"] = UDim2.new(0.27939, 0, 0.15714, 0);
-G2L["13"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["13"]["Text"] = [[3 pessoa se o jogo é só 1 pessoa]];
-G2L["13"]["Name"] = [[ThirdPersonButton]];
-G2L["13"]["Position"] = UDim2.new(0.63203, 0, 0.03571, 0);
+G2L["14"] = Instance.new("TextButton", G2L["f"]);
+G2L["14"]["TextWrapped"] = true;
+G2L["14"]["TextStrokeTransparency"] = 0;
+G2L["14"]["BorderSizePixel"] = 0;
+G2L["14"]["TextStrokeColor3"] = Color3.fromRGB(0, 27, 255);
+G2L["14"]["TextSize"] = 14;
+G2L["14"]["TextScaled"] = true;
+G2L["14"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["14"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["14"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["14"]["Size"] = UDim2.new(0.27939, 0, 0.15714, 0);
+G2L["14"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["14"]["Text"] = [[3 pessoa se o jogo é só 1 pessoa]];
+G2L["14"]["Name"] = [[ThirdPersonButton]];
+G2L["14"]["Position"] = UDim2.new(0.63203, 0, 0.03571, 0);
 
 
--- StarterGui.K1BENTEAM.main.Tabs.MyScriptsTab.ThirdPersonButton.LocalScript
-G2L["14"] = Instance.new("LocalScript", G2L["13"]);
-
+-- StarterGui.K1BENTEAM.main.Tabs.MyScriptsTab.ThirdPersonButton.3rdPersonScript
+G2L["15"] = Instance.new("LocalScript", G2L["14"]);
+G2L["15"]["Name"] = [[3rdPersonScript]];
 
 
 -- StarterGui.K1BENTEAM.main.Tabs.MyScriptsTab.AntiVoidButton
-G2L["15"] = Instance.new("TextButton", G2L["e"]);
-G2L["15"]["TextWrapped"] = true;
-G2L["15"]["TextStrokeTransparency"] = 0;
-G2L["15"]["BorderSizePixel"] = 0;
-G2L["15"]["TextStrokeColor3"] = Color3.fromRGB(0, 27, 255);
-G2L["15"]["TextSize"] = 14;
-G2L["15"]["TextScaled"] = true;
-G2L["15"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["15"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
-G2L["15"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["15"]["Size"] = UDim2.new(0.27939, 0, 0.15714, 0);
-G2L["15"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["15"]["Text"] = [[anti void]];
-G2L["15"]["Name"] = [[AntiVoidButton]];
-G2L["15"]["Position"] = UDim2.new(0.02044, 0, 0.26071, 0);
+G2L["16"] = Instance.new("TextButton", G2L["f"]);
+G2L["16"]["TextWrapped"] = true;
+G2L["16"]["TextStrokeTransparency"] = 0;
+G2L["16"]["BorderSizePixel"] = 0;
+G2L["16"]["TextStrokeColor3"] = Color3.fromRGB(0, 27, 255);
+G2L["16"]["TextSize"] = 14;
+G2L["16"]["TextScaled"] = true;
+G2L["16"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["16"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["16"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["16"]["Size"] = UDim2.new(0.27939, 0, 0.15714, 0);
+G2L["16"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["16"]["Text"] = [[anti void]];
+G2L["16"]["Name"] = [[AntiVoidButton]];
+G2L["16"]["Position"] = UDim2.new(0.02044, 0, 0.26071, 0);
 
 
--- StarterGui.K1BENTEAM.main.Tabs.MyScriptsTab.AntiVoidButton.LocalScript
-G2L["16"] = Instance.new("LocalScript", G2L["15"]);
+-- StarterGui.K1BENTEAM.main.Tabs.MyScriptsTab.AntiVoidButton.AntiVoidScript
+G2L["17"] = Instance.new("LocalScript", G2L["16"]);
+G2L["17"]["Name"] = [[AntiVoidScript]];
 
 
-
--- StarterGui.K1BENTEAM.main.Tabs.TeamTab
-G2L["17"] = Instance.new("Frame", G2L["d"]);
-G2L["17"]["Visible"] = false;
-G2L["17"]["BorderSizePixel"] = 0;
-G2L["17"]["BackgroundColor3"] = Color3.fromRGB(255, 141, 0);
-G2L["17"]["ClipsDescendants"] = true;
-G2L["17"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["17"]["Position"] = UDim2.new(-0.00022, 0, -0.00286, 0);
-G2L["17"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["17"]["Name"] = [[TeamTab]];
-
-
--- StarterGui.K1BENTEAM.main.Tabs.TeamTab.Script1Button
-G2L["18"] = Instance.new("TextButton", G2L["17"]);
+-- StarterGui.K1BENTEAM.main.Tabs.MyScriptsTab.SpeedButton
+G2L["18"] = Instance.new("TextButton", G2L["f"]);
 G2L["18"]["TextWrapped"] = true;
 G2L["18"]["TextStrokeTransparency"] = 0;
 G2L["18"]["BorderSizePixel"] = 0;
-G2L["18"]["TextStrokeColor3"] = Color3.fromRGB(255, 226, 0);
+G2L["18"]["TextStrokeColor3"] = Color3.fromRGB(0, 27, 255);
 G2L["18"]["TextSize"] = 14;
 G2L["18"]["TextScaled"] = true;
 G2L["18"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["18"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
 G2L["18"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["18"]["Size"] = UDim2.new(0, 586, 0, 91);
-G2L["18"]["ClipsDescendants"] = true;
+G2L["18"]["Size"] = UDim2.new(0.27939, 0, 0.15714, 0);
 G2L["18"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["18"]["Text"] = [[logo logo será adicionado botoes, ccomo posso adicionar?]];
-G2L["18"]["Name"] = [[Script1Button]];
+G2L["18"]["Text"] = [[correr feito um fdp]];
+G2L["18"]["Name"] = [[SpeedButton]];
+G2L["18"]["Position"] = UDim2.new(0.32709, 0, 0.26071, 0);
 
 
--- StarterGui.K1BENTEAM.main.Tabs.TeamTab.Script1Button.LocalScript
+-- StarterGui.K1BENTEAM.main.Tabs.MyScriptsTab.SpeedButton.SpeedScript
 G2L["19"] = Instance.new("LocalScript", G2L["18"]);
+G2L["19"]["Name"] = [[SpeedScript]];
 
+
+-- StarterGui.K1BENTEAM.main.Tabs.TeamTab
+G2L["1a"] = Instance.new("Frame", G2L["e"]);
+G2L["1a"]["Visible"] = false;
+G2L["1a"]["BorderSizePixel"] = 0;
+G2L["1a"]["BackgroundColor3"] = Color3.fromRGB(255, 141, 0);
+G2L["1a"]["ClipsDescendants"] = true;
+G2L["1a"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["1a"]["Position"] = UDim2.new(-0.00022, 0, -0.00286, 0);
+G2L["1a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1a"]["Name"] = [[TeamTab]];
+
+
+-- StarterGui.K1BENTEAM.main.Tabs.TeamTab.Script1Button
+G2L["1b"] = Instance.new("TextButton", G2L["1a"]);
+G2L["1b"]["TextWrapped"] = true;
+G2L["1b"]["TextStrokeTransparency"] = 0;
+G2L["1b"]["BorderSizePixel"] = 0;
+G2L["1b"]["TextStrokeColor3"] = Color3.fromRGB(255, 226, 0);
+G2L["1b"]["TextSize"] = 14;
+G2L["1b"]["TextScaled"] = true;
+G2L["1b"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1b"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["1b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1b"]["Size"] = UDim2.new(0, 586, 0, 91);
+G2L["1b"]["ClipsDescendants"] = true;
+G2L["1b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1b"]["Text"] = [[logo logo será adicionado botoes, ccomo posso adicionar?]];
+G2L["1b"]["Name"] = [[Script1Button]];
+
+
+-- StarterGui.K1BENTEAM.main.Tabs.TeamTab.Script1Button.TeamScript
+G2L["1c"] = Instance.new("LocalScript", G2L["1b"]);
+G2L["1c"]["Name"] = [[TeamScript]];
 
 
 -- StarterGui.K1BENTEAM.main.Tabs.TeamTab.Script2Button
-G2L["1a"] = Instance.new("TextButton", G2L["17"]);
-G2L["1a"]["TextWrapped"] = true;
-G2L["1a"]["TextStrokeTransparency"] = 0;
-G2L["1a"]["BorderSizePixel"] = 0;
-G2L["1a"]["TextStrokeColor3"] = Color3.fromRGB(255, 226, 0);
-G2L["1a"]["TextSize"] = 14;
-G2L["1a"]["TextScaled"] = true;
-G2L["1a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1a"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
-G2L["1a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["1a"]["Size"] = UDim2.new(0, 586, 0, 144);
-G2L["1a"]["ClipsDescendants"] = true;
-G2L["1a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1a"]["Text"] = [[me manda um script q tu achou e um nome e pronto, vai ser adicionado nessa aba]];
-G2L["1a"]["Name"] = [[Script2Button]];
-G2L["1a"]["Position"] = UDim2.new(0.0017, 0, 0.43929, 0);
+G2L["1d"] = Instance.new("TextButton", G2L["1a"]);
+G2L["1d"]["TextWrapped"] = true;
+G2L["1d"]["TextStrokeTransparency"] = 0;
+G2L["1d"]["BorderSizePixel"] = 0;
+G2L["1d"]["TextStrokeColor3"] = Color3.fromRGB(255, 226, 0);
+G2L["1d"]["TextSize"] = 14;
+G2L["1d"]["TextScaled"] = true;
+G2L["1d"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1d"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["1d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1d"]["Size"] = UDim2.new(0, 586, 0, 144);
+G2L["1d"]["ClipsDescendants"] = true;
+G2L["1d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1d"]["Text"] = [[me manda um script q tu achou e um nome e pronto, vai ser adicionado nessa aba]];
+G2L["1d"]["Name"] = [[Script2Button]];
+G2L["1d"]["Position"] = UDim2.new(0.0017, 0, 0.43929, 0);
 
 
--- StarterGui.K1BENTEAM.main.Tabs.TeamTab.Script2Button.LocalScript
-G2L["1b"] = Instance.new("LocalScript", G2L["1a"]);
-
+-- StarterGui.K1BENTEAM.main.Tabs.TeamTab.Script2Button.TeamScript
+G2L["1e"] = Instance.new("LocalScript", G2L["1d"]);
+G2L["1e"]["Name"] = [[TeamScript]];
 
 
 -- StarterGui.K1BENTEAM.main.Tabs.ExecutorTab
-G2L["1c"] = Instance.new("Frame", G2L["d"]);
-G2L["1c"]["Visible"] = false;
-G2L["1c"]["BorderSizePixel"] = 0;
-G2L["1c"]["BackgroundColor3"] = Color3.fromRGB(255, 141, 0);
-G2L["1c"]["ClipsDescendants"] = true;
-G2L["1c"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["1c"]["Position"] = UDim2.new(-0.00022, 0, -0.00286, 0);
-G2L["1c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1c"]["Name"] = [[ExecutorTab]];
+G2L["1f"] = Instance.new("Frame", G2L["e"]);
+G2L["1f"]["Visible"] = false;
+G2L["1f"]["BorderSizePixel"] = 0;
+G2L["1f"]["BackgroundColor3"] = Color3.fromRGB(255, 141, 0);
+G2L["1f"]["ClipsDescendants"] = true;
+G2L["1f"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["1f"]["Position"] = UDim2.new(-0.00022, 0, -0.00286, 0);
+G2L["1f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1f"]["Name"] = [[ExecutorTab]];
 
 
 -- StarterGui.K1BENTEAM.main.Tabs.ExecutorTab.CodeBox
-G2L["1d"] = Instance.new("TextBox", G2L["1c"]);
-G2L["1d"]["CursorPosition"] = -1;
-G2L["1d"]["TextStrokeTransparency"] = 0;
-G2L["1d"]["Name"] = [[CodeBox]];
-G2L["1d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["1d"]["BorderSizePixel"] = 0;
-G2L["1d"]["TextSize"] = 16;
-G2L["1d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["1d"]["TextYAlignment"] = Enum.TextYAlignment.Top;
-G2L["1d"]["BackgroundColor3"] = Color3.fromRGB(90, 0, 0);
-G2L["1d"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["1d"]["MultiLine"] = true;
-G2L["1d"]["ClearTextOnFocus"] = false;
-G2L["1d"]["PlaceholderText"] = [[eu me odeio cola teu script aq logo]];
-G2L["1d"]["Size"] = UDim2.new(0, 573, 0, 175);
-G2L["1d"]["Position"] = UDim2.new(0.01193, 0, 0.025, 0);
-G2L["1d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1d"]["Text"] = [[]];
+G2L["20"] = Instance.new("TextBox", G2L["1f"]);
+G2L["20"]["TextStrokeTransparency"] = 0;
+G2L["20"]["Name"] = [[CodeBox]];
+G2L["20"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["20"]["BorderSizePixel"] = 0;
+G2L["20"]["TextSize"] = 16;
+G2L["20"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["20"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["20"]["BackgroundColor3"] = Color3.fromRGB(90, 0, 0);
+G2L["20"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["20"]["MultiLine"] = true;
+G2L["20"]["ClearTextOnFocus"] = false;
+G2L["20"]["PlaceholderText"] = [[eu me odeio cola teu script aq logo]];
+G2L["20"]["Size"] = UDim2.new(0, 573, 0, 175);
+G2L["20"]["Position"] = UDim2.new(0.01193, 0, 0.025, 0);
+G2L["20"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["20"]["Text"] = [[]];
 
 
 -- StarterGui.K1BENTEAM.main.Tabs.ExecutorTab.ExecuteButton
-G2L["1e"] = Instance.new("TextButton", G2L["1c"]);
-G2L["1e"]["TextWrapped"] = true;
-G2L["1e"]["TextStrokeTransparency"] = 0;
-G2L["1e"]["BorderSizePixel"] = 0;
-G2L["1e"]["TextStrokeColor3"] = Color3.fromRGB(0, 27, 255);
-G2L["1e"]["TextSize"] = 14;
-G2L["1e"]["TextScaled"] = true;
-G2L["1e"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1e"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
-G2L["1e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["1e"]["Size"] = UDim2.new(0.29302, 0, 0.30357, 0);
-G2L["1e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1e"]["Text"] = [[executar]];
-G2L["1e"]["Name"] = [[ExecuteButton]];
-G2L["1e"]["Position"] = UDim2.new(0.01193, 0, 0.675, 0);
+G2L["21"] = Instance.new("TextButton", G2L["1f"]);
+G2L["21"]["TextWrapped"] = true;
+G2L["21"]["TextStrokeTransparency"] = 0;
+G2L["21"]["BorderSizePixel"] = 0;
+G2L["21"]["TextStrokeColor3"] = Color3.fromRGB(0, 27, 255);
+G2L["21"]["TextSize"] = 14;
+G2L["21"]["TextScaled"] = true;
+G2L["21"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["21"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["21"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["21"]["Size"] = UDim2.new(0.29302, 0, 0.30357, 0);
+G2L["21"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["21"]["Text"] = [[executar]];
+G2L["21"]["Name"] = [[ExecuteButton]];
+G2L["21"]["Position"] = UDim2.new(0.01193, 0, 0.675, 0);
 
 
--- StarterGui.K1BENTEAM.main.Tabs.ExecutorTab.ExecuteButton.LocalScript
-G2L["1f"] = Instance.new("LocalScript", G2L["1e"]);
-
+-- StarterGui.K1BENTEAM.main.Tabs.ExecutorTab.ExecuteButton.ExecuteScript
+G2L["22"] = Instance.new("LocalScript", G2L["21"]);
+G2L["22"]["Name"] = [[ExecuteScript]];
 
 
 -- StarterGui.K1BENTEAM.main.Tabs.ExecutorTab.ClearButton
-G2L["20"] = Instance.new("TextButton", G2L["1c"]);
-G2L["20"]["TextWrapped"] = true;
-G2L["20"]["TextStrokeTransparency"] = 0;
-G2L["20"]["BorderSizePixel"] = 0;
-G2L["20"]["TextStrokeColor3"] = Color3.fromRGB(0, 27, 255);
-G2L["20"]["TextSize"] = 14;
-G2L["20"]["TextScaled"] = true;
-G2L["20"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["20"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
-G2L["20"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["20"]["Size"] = UDim2.new(0.29302, 0, 0.30357, 0);
-G2L["20"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["20"]["Text"] = [[resetar texto]];
-G2L["20"]["Name"] = [[ClearButton]];
-G2L["20"]["Position"] = UDim2.new(0.32879, 0, 0.675, 0);
+G2L["23"] = Instance.new("TextButton", G2L["1f"]);
+G2L["23"]["TextWrapped"] = true;
+G2L["23"]["TextStrokeTransparency"] = 0;
+G2L["23"]["BorderSizePixel"] = 0;
+G2L["23"]["TextStrokeColor3"] = Color3.fromRGB(0, 27, 255);
+G2L["23"]["TextSize"] = 14;
+G2L["23"]["TextScaled"] = true;
+G2L["23"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["23"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["23"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["23"]["Size"] = UDim2.new(0.29302, 0, 0.30357, 0);
+G2L["23"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["23"]["Text"] = [[resetar texto]];
+G2L["23"]["Name"] = [[ClearButton]];
+G2L["23"]["Position"] = UDim2.new(0.32879, 0, 0.675, 0);
 
 
--- StarterGui.K1BENTEAM.main.Tabs.ExecutorTab.ClearButton.LocalScript
-G2L["21"] = Instance.new("LocalScript", G2L["20"]);
-
+-- StarterGui.K1BENTEAM.main.Tabs.ExecutorTab.ClearButton.Clear
+G2L["24"] = Instance.new("LocalScript", G2L["23"]);
+G2L["24"]["Name"] = [[Clear]];
 
 
 -- StarterGui.K1BENTEAM.main.Tabs.ExecutorTab.SSButton
-G2L["22"] = Instance.new("TextButton", G2L["1c"]);
-G2L["22"]["TextWrapped"] = true;
-G2L["22"]["TextStrokeTransparency"] = 0;
-G2L["22"]["BorderSizePixel"] = 0;
-G2L["22"]["TextStrokeColor3"] = Color3.fromRGB(0, 27, 255);
-G2L["22"]["TextSize"] = 14;
-G2L["22"]["TextScaled"] = true;
-G2L["22"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["22"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
-G2L["22"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["22"]["Size"] = UDim2.new(0.29302, 0, 0.30357, 0);
-G2L["22"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["22"]["Text"] = [[tentar fazer o script ser serversided]];
-G2L["22"]["Name"] = [[SSButton]];
-G2L["22"]["Position"] = UDim2.new(0.69506, 0, 0.675, 0);
+G2L["25"] = Instance.new("TextButton", G2L["1f"]);
+G2L["25"]["TextWrapped"] = true;
+G2L["25"]["TextStrokeTransparency"] = 0;
+G2L["25"]["BorderSizePixel"] = 0;
+G2L["25"]["TextStrokeColor3"] = Color3.fromRGB(0, 27, 255);
+G2L["25"]["TextSize"] = 14;
+G2L["25"]["TextScaled"] = true;
+G2L["25"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["25"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["25"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["25"]["Size"] = UDim2.new(0.29302, 0, 0.30357, 0);
+G2L["25"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["25"]["Text"] = [[tentar fazer o script ser serversided]];
+G2L["25"]["Name"] = [[SSButton]];
+G2L["25"]["Position"] = UDim2.new(0.69506, 0, 0.675, 0);
 
 
--- StarterGui.K1BENTEAM.main.Tabs.ExecutorTab.SSButton.LocalScript
-G2L["23"] = Instance.new("LocalScript", G2L["22"]);
-
+-- StarterGui.K1BENTEAM.main.Tabs.ExecutorTab.SSButton.SSTryScript
+G2L["26"] = Instance.new("LocalScript", G2L["25"]);
+G2L["26"]["Name"] = [[SSTryScript]];
 
 
 -- StarterGui.K1BENTEAM.main.CloseConfirm
-G2L["24"] = Instance.new("Frame", G2L["3"]);
-G2L["24"]["Visible"] = false;
-G2L["24"]["BorderSizePixel"] = 0;
-G2L["24"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["24"]["Size"] = UDim2.new(0, 432, 0, 254);
-G2L["24"]["Position"] = UDim2.new(0.14, 0, 0.05714, 0);
-G2L["24"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["24"]["Name"] = [[CloseConfirm]];
+G2L["27"] = Instance.new("Frame", G2L["3"]);
+G2L["27"]["Visible"] = false;
+G2L["27"]["BorderSizePixel"] = 0;
+G2L["27"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["27"]["Size"] = UDim2.new(0, 432, 0, 254);
+G2L["27"]["Position"] = UDim2.new(0.14, 0, 0.05714, 0);
+G2L["27"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["27"]["Name"] = [[CloseConfirm]];
 
 
 -- StarterGui.K1BENTEAM.main.CloseConfirm.Title
-G2L["25"] = Instance.new("TextLabel", G2L["24"]);
-G2L["25"]["TextWrapped"] = true;
-G2L["25"]["BorderSizePixel"] = 0;
-G2L["25"]["TextSize"] = 14;
-G2L["25"]["TextScaled"] = true;
-G2L["25"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["25"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["25"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["25"]["BackgroundTransparency"] = 1;
-G2L["25"]["Size"] = UDim2.new(0, 408, 0, 54);
-G2L["25"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["25"]["Text"] = [[tu vai mermo fechar ssa p*rra?]];
-G2L["25"]["Name"] = [[Title]];
-G2L["25"]["Position"] = UDim2.new(0.02546, 0, 0.05118, 0);
-
-
--- StarterGui.K1BENTEAM.main.CloseConfirm.Yes
-G2L["26"] = Instance.new("TextButton", G2L["24"]);
-G2L["26"]["TextWrapped"] = true;
-G2L["26"]["BorderSizePixel"] = 0;
-G2L["26"]["TextSize"] = 14;
-G2L["26"]["TextScaled"] = true;
-G2L["26"]["TextColor3"] = Color3.fromRGB(0, 255, 0);
-G2L["26"]["BackgroundColor3"] = Color3.fromRGB(54, 54, 54);
-G2L["26"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["26"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["26"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["26"]["Text"] = [[sim seu b*sta]];
-G2L["26"]["Name"] = [[Yes]];
-G2L["26"]["Position"] = UDim2.new(0.02546, 0, 0.74016, 0);
-
-
--- StarterGui.K1BENTEAM.main.CloseConfirm.Yes.LocalScript
-G2L["27"] = Instance.new("LocalScript", G2L["26"]);
-
-
-
--- StarterGui.K1BENTEAM.main.CloseConfirm.No
-G2L["28"] = Instance.new("TextButton", G2L["24"]);
+G2L["28"] = Instance.new("TextLabel", G2L["27"]);
 G2L["28"]["TextWrapped"] = true;
 G2L["28"]["BorderSizePixel"] = 0;
 G2L["28"]["TextSize"] = 14;
 G2L["28"]["TextScaled"] = true;
-G2L["28"]["TextColor3"] = Color3.fromRGB(255, 0, 0);
-G2L["28"]["BackgroundColor3"] = Color3.fromRGB(54, 54, 54);
+G2L["28"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["28"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["28"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["28"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["28"]["BackgroundTransparency"] = 1;
+G2L["28"]["Size"] = UDim2.new(0, 408, 0, 54);
 G2L["28"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["28"]["Text"] = [[nao seu cabeça de mijo]];
-G2L["28"]["Name"] = [[No]];
-G2L["28"]["Position"] = UDim2.new(0.50694, 0, 0.74016, 0);
+G2L["28"]["Text"] = [[tu vai mermo fechar ssa p*rra?]];
+G2L["28"]["Name"] = [[Title]];
+G2L["28"]["Position"] = UDim2.new(0.02546, 0, 0.05118, 0);
 
 
--- StarterGui.K1BENTEAM.main.CloseConfirm.No.LocalScript
-G2L["29"] = Instance.new("LocalScript", G2L["28"]);
+-- StarterGui.K1BENTEAM.main.CloseConfirm.Yes
+G2L["29"] = Instance.new("TextButton", G2L["27"]);
+G2L["29"]["TextWrapped"] = true;
+G2L["29"]["BorderSizePixel"] = 0;
+G2L["29"]["TextSize"] = 14;
+G2L["29"]["TextScaled"] = true;
+G2L["29"]["TextColor3"] = Color3.fromRGB(0, 255, 0);
+G2L["29"]["BackgroundColor3"] = Color3.fromRGB(54, 54, 54);
+G2L["29"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["29"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["29"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["29"]["Text"] = [[sim seu m*rda]];
+G2L["29"]["Name"] = [[Yes]];
+G2L["29"]["Position"] = UDim2.new(0.02546, 0, 0.74016, 0);
 
+
+-- StarterGui.K1BENTEAM.main.CloseConfirm.Yes.AnswerYes
+G2L["2a"] = Instance.new("LocalScript", G2L["29"]);
+G2L["2a"]["Name"] = [[AnswerYes]];
+
+
+-- StarterGui.K1BENTEAM.main.CloseConfirm.No
+G2L["2b"] = Instance.new("TextButton", G2L["27"]);
+G2L["2b"]["TextWrapped"] = true;
+G2L["2b"]["BorderSizePixel"] = 0;
+G2L["2b"]["TextSize"] = 14;
+G2L["2b"]["TextScaled"] = true;
+G2L["2b"]["TextColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["2b"]["BackgroundColor3"] = Color3.fromRGB(54, 54, 54);
+G2L["2b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2b"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["2b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2b"]["Text"] = [[nao seu cabeça de b*sta]];
+G2L["2b"]["Name"] = [[No]];
+G2L["2b"]["Position"] = UDim2.new(0.50694, 0, 0.74016, 0);
+
+
+-- StarterGui.K1BENTEAM.main.CloseConfirm.No.AnswerNo
+G2L["2c"] = Instance.new("LocalScript", G2L["2b"]);
+G2L["2c"]["Name"] = [[AnswerNo]];
 
 
 -- StarterGui.K1BENTEAM.topbar
-G2L["2a"] = Instance.new("Frame", G2L["1"]);
-G2L["2a"]["BorderSizePixel"] = 0;
-G2L["2a"]["BackgroundColor3"] = Color3.fromRGB(135, 0, 0);
-G2L["2a"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["2a"]["Size"] = UDim2.new(0.46154, 0, 0.07886, 0);
-G2L["2a"]["Position"] = UDim2.new(0.5, 0, 0.21767, 0);
-G2L["2a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2a"]["Name"] = [[topbar]];
+G2L["2d"] = Instance.new("Frame", G2L["1"]);
+G2L["2d"]["BorderSizePixel"] = 0;
+G2L["2d"]["BackgroundColor3"] = Color3.fromRGB(135, 0, 0);
+G2L["2d"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["2d"]["Size"] = UDim2.new(0.46154, 0, 0.07886, 0);
+G2L["2d"]["Position"] = UDim2.new(0.5, 0, 0.21767, 0);
+G2L["2d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2d"]["Name"] = [[topbar]];
 
 
 -- StarterGui.K1BENTEAM.topbar.Title
-G2L["2b"] = Instance.new("TextLabel", G2L["2a"]);
-G2L["2b"]["TextWrapped"] = true;
-G2L["2b"]["TextStrokeTransparency"] = 0;
-G2L["2b"]["BorderSizePixel"] = 0;
-G2L["2b"]["TextSize"] = 14;
-G2L["2b"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["2b"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["2b"]["TextScaled"] = true;
-G2L["2b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["2b"]["FontFace"] = Font.new([[rbxasset://fonts/families/HighwayGothic.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["2b"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2b"]["BackgroundTransparency"] = 1;
-G2L["2b"]["Size"] = UDim2.new(0.75167, 0, 1, 0);
-G2L["2b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2b"]["Text"] = [[K1BEN5 É A M*RDA DO MELHOR TIME!! NOIS É UNIVERSAL!!]];
-G2L["2b"]["Name"] = [[Title]];
+G2L["2e"] = Instance.new("TextLabel", G2L["2d"]);
+G2L["2e"]["TextWrapped"] = true;
+G2L["2e"]["TextStrokeTransparency"] = 0;
+G2L["2e"]["BorderSizePixel"] = 0;
+G2L["2e"]["TextSize"] = 14;
+G2L["2e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["2e"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2e"]["TextScaled"] = true;
+G2L["2e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2e"]["FontFace"] = Font.new([[rbxasset://fonts/families/HighwayGothic.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2e"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2e"]["BackgroundTransparency"] = 1;
+G2L["2e"]["Size"] = UDim2.new(0.75167, 0, 1, 0);
+G2L["2e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2e"]["Text"] = [[K1BEN5 É A M*RDA DO MELHOR TIME!! NOIS É UNIVERSAL!!]];
+G2L["2e"]["Name"] = [[Title]];
 
 
 -- StarterGui.K1BENTEAM.topbar.Close
-G2L["2c"] = Instance.new("TextButton", G2L["2a"]);
-G2L["2c"]["TextWrapped"] = true;
-G2L["2c"]["Active"] = false;
-G2L["2c"]["TextStrokeTransparency"] = 0;
-G2L["2c"]["BorderSizePixel"] = 0;
-G2L["2c"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["2c"]["TextSize"] = 14;
-G2L["2c"]["TextScaled"] = true;
-G2L["2c"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["2c"]["FontFace"] = Font.new([[rbxasset://fonts/families/HighwayGothic.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["2c"]["Selectable"] = false;
-G2L["2c"]["BackgroundTransparency"] = 1;
-G2L["2c"]["Size"] = UDim2.new(0.08333, 0, 1, 0);
-G2L["2c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2c"]["Text"] = [[X]];
-G2L["2c"]["Name"] = [[Close]];
-G2L["2c"]["Position"] = UDim2.new(0.91667, 0, 0, 0);
-
-
--- StarterGui.K1BENTEAM.topbar.Close.LocalScript
-G2L["2d"] = Instance.new("LocalScript", G2L["2c"]);
-
-
-
--- StarterGui.K1BENTEAM.topbar.ImageLabel
-G2L["2e"] = Instance.new("ImageLabel", G2L["2a"]);
-G2L["2e"]["BorderSizePixel"] = 0;
-G2L["2e"]["ScaleType"] = Enum.ScaleType.Slice;
-G2L["2e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["2e"]["Image"] = [[rbxassetid://105935201132843]];
-G2L["2e"]["Size"] = UDim2.new(0.19833, 0, 2.26, 0);
-G2L["2e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2e"]["BackgroundTransparency"] = 1;
-G2L["2e"]["Position"] = UDim2.new(0.80167, 0, -2.26, 0);
-
-
--- StarterGui.K1BENTEAM.topbar.Minimize
-G2L["2f"] = Instance.new("TextButton", G2L["2a"]);
+G2L["2f"] = Instance.new("TextButton", G2L["2d"]);
 G2L["2f"]["TextWrapped"] = true;
 G2L["2f"]["Active"] = false;
 G2L["2f"]["TextStrokeTransparency"] = 0;
@@ -560,17 +551,55 @@ G2L["2f"]["Selectable"] = false;
 G2L["2f"]["BackgroundTransparency"] = 1;
 G2L["2f"]["Size"] = UDim2.new(0.08333, 0, 1, 0);
 G2L["2f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2f"]["Text"] = [[-]];
-G2L["2f"]["Name"] = [[Minimize]];
-G2L["2f"]["Position"] = UDim2.new(0.81667, 0, 0, 0);
+G2L["2f"]["Text"] = [[X]];
+G2L["2f"]["Name"] = [[Close]];
+G2L["2f"]["Position"] = UDim2.new(0.91667, 0, 0, 0);
 
 
--- StarterGui.K1BENTEAM.topbar.Minimize.LocalScript
+-- StarterGui.K1BENTEAM.topbar.Close.CloseScript
 G2L["30"] = Instance.new("LocalScript", G2L["2f"]);
+G2L["30"]["Name"] = [[CloseScript]];
 
 
+-- StarterGui.K1BENTEAM.topbar.ImageLabel
+G2L["31"] = Instance.new("ImageLabel", G2L["2d"]);
+G2L["31"]["BorderSizePixel"] = 0;
+G2L["31"]["ScaleType"] = Enum.ScaleType.Slice;
+G2L["31"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["31"]["Image"] = [[rbxassetid://105935201132843]];
+G2L["31"]["Size"] = UDim2.new(0.19833, 0, 2.26, 0);
+G2L["31"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["31"]["BackgroundTransparency"] = 1;
+G2L["31"]["Position"] = UDim2.new(0.80167, 0, -2.26, 0);
 
--- StarterGui.K1BENTEAM.LocalScript
+
+-- StarterGui.K1BENTEAM.topbar.Minimize
+G2L["32"] = Instance.new("TextButton", G2L["2d"]);
+G2L["32"]["TextWrapped"] = true;
+G2L["32"]["Active"] = false;
+G2L["32"]["TextStrokeTransparency"] = 0;
+G2L["32"]["BorderSizePixel"] = 0;
+G2L["32"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["32"]["TextSize"] = 14;
+G2L["32"]["TextScaled"] = true;
+G2L["32"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["32"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["32"]["FontFace"] = Font.new([[rbxasset://fonts/families/HighwayGothic.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["32"]["Selectable"] = false;
+G2L["32"]["BackgroundTransparency"] = 1;
+G2L["32"]["Size"] = UDim2.new(0.08333, 0, 1, 0);
+G2L["32"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["32"]["Text"] = [[-]];
+G2L["32"]["Name"] = [[Minimize]];
+G2L["32"]["Position"] = UDim2.new(0.81667, 0, 0, 0);
+
+
+-- StarterGui.K1BENTEAM.topbar.Minimize.MinimizeScript
+G2L["33"] = Instance.new("LocalScript", G2L["32"]);
+G2L["33"]["Name"] = [[MinimizeScript]];
+
+
+-- StarterGui.K1BENTEAM.drag
 local function C_2()
 local script = G2L["2"];
 	local player = game.Players.LocalPlayer
@@ -623,9 +652,34 @@ local script = G2L["2"];
 	
 end;
 task.spawn(C_2);
--- StarterGui.K1BENTEAM.main.tabsselection.TeamTab.LocalScript
-local function C_8()
-local script = G2L["8"];
+-- StarterGui.K1BENTEAM.main.tabsselection.ExecutorTab.OpenExecutor
+local function C_7()
+local script = G2L["7"];
+	local btn = script.Parent
+	local tab = btn.Parent.Parent.Tabs.ExecutorTab
+	
+	btn.MouseButton1Click:Connect(function()
+		for _, otherTab in pairs(tab.Parent:GetChildren()) do
+			if otherTab:IsA("Frame") and otherTab ~= tab then
+				otherTab.Visible = false
+			end
+		end
+	
+		tab.Visible = not tab.Visible
+		btn.UIStroke.Enabled = not btn.UIStroke.Enabled
+	
+		-- desativar uistroke de outros botões se estiverem ligados
+		for _, otherBtn in pairs(btn.Parent:GetChildren()) do
+			if otherBtn:IsA("TextButton") and otherBtn ~= btn then
+				otherBtn.UIStroke.Enabled = false
+			end
+		end
+	end)
+end;
+task.spawn(C_7);
+-- StarterGui.K1BENTEAM.main.tabsselection.TeamTab.OpenTeam
+local function C_9()
+local script = G2L["9"];
 	local btn = script.Parent
 	local tab = btn.Parent.Parent.Tabs.TeamTab
 	
@@ -647,10 +701,10 @@ local script = G2L["8"];
 		end
 	end)
 end;
-task.spawn(C_8);
--- StarterGui.K1BENTEAM.main.tabsselection.MyScriptsTab.LocalScript
-local function C_b()
-local script = G2L["b"];
+task.spawn(C_9);
+-- StarterGui.K1BENTEAM.main.tabsselection.MyScriptsTab.OpenMyScripts
+local function C_c()
+local script = G2L["c"];
 	local btn = script.Parent
 	local tab = btn.Parent.Parent.Tabs.MyScriptsTab
 	
@@ -672,10 +726,10 @@ local script = G2L["b"];
 		end
 	end)
 end;
-task.spawn(C_b);
--- StarterGui.K1BENTEAM.main.Tabs.MyScriptsTab.FlyButton.LocalScript
-local function C_10()
-local script = G2L["10"];
+task.spawn(C_c);
+-- StarterGui.K1BENTEAM.main.Tabs.MyScriptsTab.FlyButton.FlyScript
+local function C_11()
+local script = G2L["11"];
 	local button = script.Parent
 	local player = game.Players.LocalPlayer
 	local UIS = game:GetService("UserInputService")
@@ -686,7 +740,7 @@ local script = G2L["10"];
 	local bodyGyro
 	
 	local speed = 60
-	local spinSpeed = 300 -- FIXO, pode aumentar tranquilo
+	local spinSpeed = 360 -- FIXO, pode aumentar tranquilo
 	local angle = 0
 	
 	local character
@@ -777,10 +831,10 @@ local script = G2L["10"];
 		bodyGyro.CFrame = baseCF * CFrame.Angles(0, math.rad(angle), 0)
 	end)
 end;
-task.spawn(C_10);
--- StarterGui.K1BENTEAM.main.Tabs.MyScriptsTab.ESPTeamButton.LocalScript
-local function C_12()
-local script = G2L["12"];
+task.spawn(C_11);
+-- StarterGui.K1BENTEAM.main.Tabs.MyScriptsTab.ESPTeamButton.ESPTeamScript
+local function C_13()
+local script = G2L["13"];
 	local RS = game:GetService("RunService")
 	local Players = game:GetService("Players")
 	local button = script.Parent
@@ -826,10 +880,10 @@ local script = G2L["12"];
 		end
 	end)
 end;
-task.spawn(C_12);
--- StarterGui.K1BENTEAM.main.Tabs.MyScriptsTab.ThirdPersonButton.LocalScript
-local function C_14()
-local script = G2L["14"];
+task.spawn(C_13);
+-- StarterGui.K1BENTEAM.main.Tabs.MyScriptsTab.ThirdPersonButton.3rdPersonScript
+local function C_15()
+local script = G2L["15"];
 	local thirdPerson = false
 	local player = game.Players.LocalPlayer
 	local RS = game:GetService("RunService")
@@ -865,17 +919,17 @@ local script = G2L["14"];
 		end
 	end)
 end;
-task.spawn(C_14);
--- StarterGui.K1BENTEAM.main.Tabs.MyScriptsTab.AntiVoidButton.LocalScript
-local function C_16()
-local script = G2L["16"];
+task.spawn(C_15);
+-- StarterGui.K1BENTEAM.main.Tabs.MyScriptsTab.AntiVoidButton.AntiVoidScript
+local function C_17()
+local script = G2L["17"];
 	local antiVoidEnabled = false
 	local player = game.Players.LocalPlayer
 	local btn = script.Parent
 	
 	btn.MouseButton1Click:Connect(function()
 		antiVoidEnabled = not antiVoidEnabled
-		btn.Text = antiVoidEnabled and "anti void prob ON" or "anti void"
+		btn.Text = antiVoidEnabled and "anti void provavelmente ligado" or "anti void"
 	end)
 	
 	game:GetService("RunService").Heartbeat:Connect(function()
@@ -884,36 +938,47 @@ local script = G2L["16"];
 			local hrp = char and char:FindFirstChild("HumanoidRootPart")
 	
 			if hrp and hrp.Position.Y < -80 then
-				-- Resetamos a velocidade primeiro para parar a queda
 				hrp.AssemblyLinearVelocity = Vector3.zero
 				hrp.AssemblyAngularVelocity = Vector3.zero
 	
-				-- TELEPORTE INTELIGENTE:
-				-- Em vez de ir pro 0, 10, 0, ele tenta te jogar um pouco acima de onde você caiu,
-				-- ou para um lugar que você definiu como "Safe Spot".
-				hrp.CFrame = CFrame.new(hrp.Position.X, 70, hrp.Position.Z + 30) 
+				hrp.CFrame = CFrame.new(hrp.Position.X, 50, hrp.Position.Z + 30) 
 			end
 		end
 	end)
 end;
-task.spawn(C_16);
--- StarterGui.K1BENTEAM.main.Tabs.TeamTab.Script1Button.LocalScript
+task.spawn(C_17);
+-- StarterGui.K1BENTEAM.main.Tabs.MyScriptsTab.SpeedButton.SpeedScript
 local function C_19()
 local script = G2L["19"];
-	local code = [[
-		print("batata frita")
-	]]
+	local speed = false
+	local player = game.Players.LocalPlayer
+	local btn = script.Parent
 	
-	local func = loadstring(code)
+	btn.MouseButton1Click:Connect(function()
+		speed = not speed
+		btn.Text = speed and "tu ta correndo feito um fdp" or "correr feito um fdp"
+	end)
 	
-	script.Parent.MouseButton1Click:Connect(function()
-		func()
+	game:GetService("RunService").Heartbeat:Connect(function()
+		local char = player.Character
+		local hum = char and char:FindFirstChild("Humanoid")
+	
+		if hum then
+			if speed then
+				hum.WalkSpeed = 70
+			else
+				-- Só reseta se estiver muito alto, pra não estragar efeitos do jogo
+				if hum.WalkSpeed == 70 then
+					hum.WalkSpeed = 16
+				end
+			end
+		end
 	end)
 end;
 task.spawn(C_19);
--- StarterGui.K1BENTEAM.main.Tabs.TeamTab.Script2Button.LocalScript
-local function C_1b()
-local script = G2L["1b"];
+-- StarterGui.K1BENTEAM.main.Tabs.TeamTab.Script1Button.TeamScript
+local function C_1c()
+local script = G2L["1c"];
 	local code = [[
 		print("batata frita")
 	]]
@@ -924,10 +989,24 @@ local script = G2L["1b"];
 		func()
 	end)
 end;
-task.spawn(C_1b);
--- StarterGui.K1BENTEAM.main.Tabs.ExecutorTab.ExecuteButton.LocalScript
-local function C_1f()
-local script = G2L["1f"];
+task.spawn(C_1c);
+-- StarterGui.K1BENTEAM.main.Tabs.TeamTab.Script2Button.TeamScript
+local function C_1e()
+local script = G2L["1e"];
+	local code = [[
+		print("batata frita")
+	]]
+	
+	local func = loadstring(code)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		func()
+	end)
+end;
+task.spawn(C_1e);
+-- StarterGui.K1BENTEAM.main.Tabs.ExecutorTab.ExecuteButton.ExecuteScript
+local function C_22()
+local script = G2L["22"];
 	local btn = script.Parent
 	local tab = btn.Parent
 	local textBox = tab:FindFirstChild("CodeBox")
@@ -944,10 +1023,10 @@ local script = G2L["1f"];
 		end
 	end)
 end;
-task.spawn(C_1f);
--- StarterGui.K1BENTEAM.main.Tabs.ExecutorTab.ClearButton.LocalScript
-local function C_21()
-local script = G2L["21"];
+task.spawn(C_22);
+-- StarterGui.K1BENTEAM.main.Tabs.ExecutorTab.ClearButton.Clear
+local function C_24()
+local script = G2L["24"];
 	local btn = script.Parent
 	local tab = btn.Parent
 	local textBox = tab:FindFirstChild("CodeBox")
@@ -958,10 +1037,10 @@ local script = G2L["21"];
 		end
 	end)
 end;
-task.spawn(C_21);
--- StarterGui.K1BENTEAM.main.Tabs.ExecutorTab.SSButton.LocalScript
-local function C_23()
-local script = G2L["23"];
+task.spawn(C_24);
+-- StarterGui.K1BENTEAM.main.Tabs.ExecutorTab.SSButton.SSTryScript
+local function C_26()
+local script = G2L["26"];
 	local btn = script.Parent
 	local codeBox = btn.Parent:FindFirstChild("CodeBox")
 	
@@ -1011,38 +1090,38 @@ local script = G2L["23"];
 		btn.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
 	end)
 end;
-task.spawn(C_23);
--- StarterGui.K1BENTEAM.main.CloseConfirm.Yes.LocalScript
-local function C_27()
-local script = G2L["27"];
+task.spawn(C_26);
+-- StarterGui.K1BENTEAM.main.CloseConfirm.Yes.AnswerYes
+local function C_2a()
+local script = G2L["2a"];
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.Parent:Destroy()
 	end)
 end;
-task.spawn(C_27);
--- StarterGui.K1BENTEAM.main.CloseConfirm.No.LocalScript
-local function C_29()
-local script = G2L["29"];
+task.spawn(C_2a);
+-- StarterGui.K1BENTEAM.main.CloseConfirm.No.AnswerNo
+local function C_2c()
+local script = G2L["2c"];
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end;
-task.spawn(C_29);
--- StarterGui.K1BENTEAM.topbar.Close.LocalScript
-local function C_2d()
-local script = G2L["2d"];
+task.spawn(C_2c);
+-- StarterGui.K1BENTEAM.topbar.Close.CloseScript
+local function C_30()
+local script = G2L["30"];
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.main.CloseConfirm.Visible = true
 	end)
 end;
-task.spawn(C_2d);
--- StarterGui.K1BENTEAM.topbar.Minimize.LocalScript
-local function C_30()
-local script = G2L["30"];
+task.spawn(C_30);
+-- StarterGui.K1BENTEAM.topbar.Minimize.MinimizeScript
+local function C_33()
+local script = G2L["33"];
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.main.Visible = not script.Parent.Parent.Parent.main.Visible
 	end)
 end;
-task.spawn(C_30);
+task.spawn(C_33);
 
 return G2L["1"], require;
